@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {User} from "./main/SideBar/Item/commons/User";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const user = {avatar:"", userName:"psyduck", certified:true}
 root.render(
   <React.StrictMode>
     <App />
+      <User user = {user} size={"sm"}/>
   </React.StrictMode>
 );
 

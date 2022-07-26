@@ -1,0 +1,7 @@
+div{
+    background: blue;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    left: 0;
+}
