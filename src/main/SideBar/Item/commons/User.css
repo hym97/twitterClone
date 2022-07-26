@@ -1,10 +1,12 @@
-.small-container{
+.User-container{
     height: 22px;
     display: flex;
     align-items: center;
+    width: 224px;
+    color: #536471;
 }
 
-.small-avatar{
+.User-avatar{
     display: inline-block;
     width: 18px;
     height:18px;
@@ -12,18 +14,21 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin: 2px;
+    box-sizing: border-box;
 }
 
-.small-userName{
+.User-userName{
     font-size: 14px;
     color: black;
     line-height: 18px;
     font-weight: 700;
-    display: flex;
-    vertical-align: text-top;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 40%;
+    box-sizing: border-box;
 }
 
-.small-cert{
+.User-cert{
     display: inline-block;
     color:rgb(29, 155, 240);
     width: 17.5px;
@@ -33,4 +38,20 @@
     fill: currentColor;
     vertical-align: text-bottom;
     margin-left: 2px;
+    box-sizing: border-box;
+}
+
+.User-time{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    max-width: 50%;
+    font-weight: 400;
+}
+
+.User-dot{
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
 }

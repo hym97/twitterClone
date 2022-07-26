@@ -4,13 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {User} from "./main/SideBar/Item/commons/User";
+import ItemHeader from "./main/SideBar/Item/commons/ItemHeader";
+import Item from "./main/SideBar/Item/Item";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const user = {avatar:"", userName:"psyduck", certified:true}
+const user = {avatar:"", userName:"psyduckpsyduckpsyduckpsyducj", certified:true, time:"4 hours ago"};
+const trendings = {prefix:"HelloWorld", suffix:"this is ymh"};
+const header = {user};
+const content = "jiolhguokgiyku gyiuguyguiyyfiu fuygyugigyu";
+const footer = {content:"2213131 tweets"}
 root.render(
   <React.StrictMode>
-    <App />
+      <App />
+      <ItemHeader user = {user}></ItemHeader>
+      <ItemHeader trendings = {trendings}></ItemHeader>
       <User user = {user} size={"sm"}/>
+      <Item header={header} content ={content} footer={footer}></Item>
   </React.StrictMode>
 );
 

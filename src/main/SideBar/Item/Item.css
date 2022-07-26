@@ -1,0 +1,14 @@
+.Item-container{
+    display: flex;
+    width: 224px;
+    flex-direction: column;
+}
+
+.Item-content-container{
+    white-space: pre-wrap;
+    font-size: 17px;
+    color:rgb(15, 20, 25);
+    overflow-wrap: break-word;
+    line-height: 22px;
+    font-weight: 700;
+}
