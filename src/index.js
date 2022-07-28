@@ -11,7 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const user = {avatar:"", userName:"psyduckpsyduckpsyduckpsyducj", certified:true, time:"4 hours ago"};
 const trendings = {prefix:"HelloWorld", suffix:"this is ymh"};
 const header = {user};
-const content = "jiolhguokgiyku gyiuguyguiyyfiu fuygyugigyu";
+const header2 = {trendings};
+const content = "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.";
 const footer = {content:"2213131 tweets"}
 root.render(
   <React.StrictMode>
@@ -19,7 +20,8 @@ root.render(
       <ItemHeader user = {user}></ItemHeader>
       <ItemHeader trendings = {trendings}></ItemHeader>
       <User user = {user} size={"sm"}/>
-      <Item header={header} content ={content} footer={footer}></Item>
+      <Item header={header} content ={content} footer={footer} meta={true}></Item>
+        <Item header = {header2} content={content} footer={footer}></Item>
   </React.StrictMode>
 );
 

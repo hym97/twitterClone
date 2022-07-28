@@ -2,6 +2,18 @@
     display: flex;
     width: 224px;
     flex-direction: column;
+
+}
+
+.Item-with-meta{
+    width: 312px;
+    position: relative;
+    background-color: rgb(239, 243, 244);
+}
+
+.Item-wrapper{
+    width: 350px;
+    padding: 13px 18px 13px 18px;
 }
 
 .Item-content-container{
@@ -11,4 +23,22 @@
     overflow-wrap: break-word;
     line-height: 22px;
     font-weight: 700;
+}
+
+.Item-meta{
+    position: absolute;
+    right: 0;
+}
+
+.Item-meta img{
+    width: 75px;
+    height: 75px;
+
+}
+
+.Item-dots{
+    position: absolute;
+    right: 0;
+    width: 22px;
+    height: 22px;
 }
