@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {User} from "./main/SideBar/Item/commons/User";
 import ItemHeader from "./main/SideBar/Item/commons/ItemHeader";
 import Item from "./main/SideBar/Item/Item";
+import SideBar from "./main/SideBar/SideBar";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const user = {avatar:"", userName:"psyduckpsyduckpsyduckpsyducj", certified:true, time:"4 hours ago"};
@@ -14,14 +15,17 @@ const header = {user};
 const header2 = {trendings};
 const content = "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.";
 const footer = {content:"2213131 tweets"}
+const Items = [{header:header, content, footer:null, meta:1}, {header:header, content, footer, meta:false}]
+
 root.render(
   <React.StrictMode>
       <App />
       <ItemHeader user = {user}></ItemHeader>
       <ItemHeader trendings = {trendings}></ItemHeader>
-      <User user = {user} size={"sm"}/>
-      <Item header={header} content ={content} footer={footer} meta={true}></Item>
-        <Item header = {header2} content={content} footer={footer}></Item>
+      {/*<User user = {user} size={"sm"}/>*/}
+      {/*<Item header={header} content ={content} footer={footer} meta={true}></Item>*/}
+      {/*  <Item header = {header2} content={content} footer={footer}></Item>*/}
+      <SideBar header={"HelloWorld"} items={Items}></SideBar>
   </React.StrictMode>
 );
 

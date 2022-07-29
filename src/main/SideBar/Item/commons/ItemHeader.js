@@ -41,7 +41,7 @@ export default class ItemHeader extends React.Component {
                     <div className={"User-container"}  style={{fontSize:"14px"}}>
                         <div>
                         <span>
-                        {trendings[prefix]}
+                        {prefix}
                         </span>
                         </div>
                     </div>

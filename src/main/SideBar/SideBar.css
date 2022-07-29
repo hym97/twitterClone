@@ -1,7 +1,12 @@
-div{
-    background: blue;
-    height: 300px;
-    width: 300px;
-    position: fixed;
-    left: 0;
+
+
+.Sidebar-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1200px) {
+    .Sidebar-container {
+        display:none;
+    }
 }

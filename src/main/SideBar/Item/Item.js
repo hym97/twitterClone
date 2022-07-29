@@ -9,12 +9,16 @@ export default class Item extends React.Component {
     render() {
         debugger
         const {header, content, footer, meta} = this.props;
-        let realFooter = null;
+        let realFooter;
         let realMeta;
         if (footer) {
             realFooter = (footer) => {
-                console.log(footer)
-                return (<Footer {...footer}></Footer>)
+                console.log(footer);
+                return (<Footer {...footer}></Footer>);
+            }
+        }else{
+            realFooter = () =>{
+                return null;
             }
         }
         if (meta) {
