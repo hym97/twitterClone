@@ -8,12 +8,20 @@
 .Item-with-meta{
     width: 312px;
     position: relative;
-    background-color: rgb(239, 243, 244);
+    cursor: pointer;
+    /*background-color: rgb(239, 243, 244);*/
 }
+
+
+
 
 .Item-wrapper{
     width: 350px;
     padding: 13px 18px 13px 18px;
+}
+
+.Item-wrapper:hover{
+    background: lightgrey;
 }
 
 .Item-content-container{
@@ -37,8 +45,35 @@
 }
 
 .Item-dots{
-    position: absolute;
-    right: 0;
     width: 22px;
     height: 22px;
+}
+
+.Item-dots-hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right:0;
+    margin:-8px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+.Item-dots-hover:hover{
+    color:rgb(29, 155, 240);
+    background-color: lightblue;
+}
+
+.Item-more{
+    position: absolute;
+    bottom: -10px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width:38px;
+    height:20px;
+    background-color: grey;
+    font-size: 14px;
 }

@@ -4,10 +4,27 @@ import ItemHeader from "./commons/ItemHeader";
 import Footer from "./commons/Footer";
 
 export default class Item extends React.Component {
-
+    state = {textState:false};
+    timeId = null;
+    displayText = () =>{
+        this.timeId = setTimeout(() => {
+          this.setState({textState:true});
+            // console.log("callBackCalled");
+            // console.log(this.state.textState)
+        }, 500)
+        // console.log("MouseOver")
+    }
+    hideText = () =>{
+        // console.log("mouseOuttriggered")
+        if(this.timeId){
+            clearTimeout(this.timeId);
+            this.timeId = null;
+        }
+        this.setState({textState:false})
+    }
 
     render() {
-        debugger
+
         const {header, content, footer, meta} = this.props;
         let realFooter;
         let realMeta;
@@ -29,15 +46,24 @@ export default class Item extends React.Component {
             }
         } else {
             realMeta = () => {
-                return (<div className={"Item-dots"}>
-                    <svg viewBox={"0 0 24 24"} style={{fill: "currentcolor", color: "rgb(83, 100, 113)}"}}>
-                        <g>
-                            <circle cx="5" cy="12" r="2"></circle>
-                            <circle cx="12" cy="12" r="2"></circle>
-                            <circle cx="19" cy="12" r="2"></circle>
-                        </g>
-                    </svg>
-                </div>)
+                return (
+                    <div  className={"Item-dots-hover"} onMouseEnter={this.displayText} onMouseLeave={this.hideText}>
+                        <div className={"Item-dots"}>
+                            <svg viewBox={"0 0 24 24"} style={{fill: "currentcolor", color: "rgb(83, 100, 113)}"}}>
+                                <g>
+                                    <circle cx="5" cy="12" r="2"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <circle cx="19" cy="12" r="2"></circle>
+                                </g>
+                            </svg>
+                        </div>
+                        <div style={{display: this.state.textState ? "flex" : "none"}} className={"Item-more"}>
+                        <span>
+                            More
+                        </span>
+                        </div>
+                    </div>
+            )
             }
         }
 

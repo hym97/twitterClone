@@ -7,7 +7,7 @@ export default class ItemHeader extends React.Component {
     render() {
         // const {header} = this.props
     const {user, trendings} = this.props
-        console.log(user)
+        // console.log(user)
         if (user) {
             return (
                 <div>

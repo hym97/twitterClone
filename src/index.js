@@ -25,7 +25,7 @@ root.render(
       {/*<User user = {user} size={"sm"}/>*/}
       {/*<Item header={header} content ={content} footer={footer} meta={true}></Item>*/}
       {/*  <Item header = {header2} content={content} footer={footer}></Item>*/}
-      <SideBar header={"HelloWorld"} items={Items}></SideBar>
+      <SideBar SideBarHeader={"HelloWorld"} items={Items}></SideBar>
   </React.StrictMode>
 );
 
