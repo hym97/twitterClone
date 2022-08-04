@@ -7,6 +7,7 @@ import {User} from "./main/SideBar/Item/commons/User";
 import ItemHeader from "./main/SideBar/Item/commons/ItemHeader";
 import Item from "./main/SideBar/Item/Item";
 import SideBar from "./main/SideBar/SideBar";
+import UserLarge from "./main/SideBar/Item/commons/UserLarge";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const user = {avatar:"", userName:"psyduckpsyduckpsyduckpsyducj", certified:true, time:"4 hours ago"};
@@ -26,6 +27,7 @@ root.render(
       {/*<Item header={header} content ={content} footer={footer} meta={true}></Item>*/}
       {/*  <Item header = {header2} content={content} footer={footer}></Item>*/}
       <SideBar SideBarHeader={"HelloWorld"} items={Items}></SideBar>
+      <UserLarge></UserLarge>
   </React.StrictMode>
 );
 

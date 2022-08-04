@@ -6,6 +6,7 @@ export class User extends React.Component {
 
         const {user} = this.props
         const {avatar, userName, certified, time} = user
+        const {userId,userDisplayedName} = userName
 
 
         return (
@@ -13,7 +14,7 @@ export class User extends React.Component {
                     <div className={"User-avatar"}
                          style={{backgroundImage: `url("https://seeklogo.com/images/P/psyduck-logo-BD70DF6321-seeklogo.com.png")`}}></div>
                     <div className={"User-userName"}>
-                        <span style={{overflow:"hidden", fontWeight:"700"}}>{userName}</span>
+                        <span style={{overflow:"hidden", fontWeight:"700"}}>{userDisplayedName}</span>
                     </div>
                     <div className={"User-cert"} style={{display: certified ? "block" : "none"}}>
                         <svg viewBox={"0,0,24,24"} height={"17.5px"} width={"17.5px"}>

@@ -21,7 +21,7 @@ export default class SideBar extends React.Component{
                     <span>{SideBarHeader}</span>
                 </div>
                 {itemsComps}
-                <div style={{padding:"13px 18px", color:"rgb(29, 155, 240)",fontSize:"17px"}}>
+                <div className={"SideBar-showmore"}>
                     <a>
                         <span>Show more</span>
                     </a>

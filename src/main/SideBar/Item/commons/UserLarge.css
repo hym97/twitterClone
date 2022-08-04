@@ -1,0 +1,65 @@
+.UserLarge-container{
+
+    width: 149px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.UserLarge-avatar{
+    height: 53px;
+    width: 53px;
+    margin-right: 13px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.UserLarge-name-container{
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 17px;
+    width: 149px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.UserLarge-cert{
+    height: 17.5px;
+    width: 17.5px;
+    color:rgb(29, 155, 240);
+    fill: currentColor;
+    margin: 5px;
+}
+
+.UserLarge-container-first-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.UserLarge-container-first-line > a{
+    max-width: 70%;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.UserLarge-name-container-first-line-text{
+    color:black;
+
+}
+
+.UserLarge-name-container-first-line-text:hover{
+    text-decoration: underline black;
+}
+
+
+.UserLarge-name-id{
+    color:  #536471;
+}
