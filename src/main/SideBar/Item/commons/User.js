@@ -6,13 +6,13 @@ export class User extends React.Component {
 
         const {user} = this.props
         const {avatar, userName, certified, time} = user
-        const {userId,userDisplayedName} = userName
+        const {userDisplayedName} = userName
 
 
         return (
             <div className={"User-container"}>
                     <div className={"User-avatar"}
-                         style={{backgroundImage: `url("https://seeklogo.com/images/P/psyduck-logo-BD70DF6321-seeklogo.com.png")`}}></div>
+                         style={{backgroundImage: `url("${avatar}")`}}></div>
                     <div className={"User-userName"}>
                         <span style={{overflow:"hidden", fontWeight:"700"}}>{userDisplayedName}</span>
                     </div>

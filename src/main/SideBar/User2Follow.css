@@ -1,0 +1,32 @@
+.User2Follow-container{
+    height:53px;
+    width: 312px;
+    margin: 13px 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.User2Follow-follow-box{
+    background-color: black;
+    display: flex;
+    color:white;
+    border-radius: 9999px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    height: 35px;
+    width: 84px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.User2Follow-follow-box:hover{
+    background-color: rgb(39,44,48);
+}
+
+.User2Follow-follow-box  > span{
+    font-size: 15px;
+}

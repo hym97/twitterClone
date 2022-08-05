@@ -1,0 +1,29 @@
+.SideBarUser2Follow-container{
+    width: 350px;
+    background-color: rgb(247, 249, 249);
+    border-color: rgb(247, 249, 249);
+    border-width: 1px;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SideBarUser2Follow-hover-effect:hover{
+    background-color: rgba(0,0,0,0.03);
+}
+
+.SideBarUser2Follow-header{
+    font-size: 22px;
+    font-weight: bolder;
+    height: 52px;
+    margin:13px 18px;
+}
+
+.SideBarUser2Follow-showmore{
+    padding:13px 18px;
+    color:rgb(29, 155, 240);
+    font-size:17px;
+    cursor: pointer;
+}
