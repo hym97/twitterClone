@@ -9,6 +9,7 @@
 }
 
 .User2Follow-follow-box{
+    margin-top:3px;
     background-color: black;
     display: flex;
     color:white;

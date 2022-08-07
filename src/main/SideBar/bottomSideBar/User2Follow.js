@@ -1,5 +1,5 @@
 import React from "react";
-import UserLarge from "./Item/commons/UserLarge";
+import UserLarge from "../Item/commons/UserLarge";
 import "./User2Follow.css"
 
 export default class User2Follow extends React.Component{
@@ -10,9 +10,7 @@ export default class User2Follow extends React.Component{
     // test_data = {avatar:this.avatar_test, userName:this.userName_test, certified: this.certified_test, promoted:true}
     render(){
         const {user} = this.props
-        console.log(user)
         const {promoted} = user
-        console.log(promoted)
         return (
                 <div className={"User2Follow-container"} style={{height: promoted ? "75px" : ""}}>
                     <UserLarge user = {user}></UserLarge>

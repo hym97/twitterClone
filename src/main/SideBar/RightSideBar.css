@@ -1,0 +1,12 @@
+.RightSideBar-placeholder{
+    width: 350px;
+    height: 58px;
+}
+
+.RightSideBar-container{
+    width: 350px;
+    height: available;
+    padding: 13px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+}

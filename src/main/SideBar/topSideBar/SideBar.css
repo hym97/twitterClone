@@ -22,16 +22,17 @@
 .SideBar-showmore{
     padding:13px 18px;
     color:rgb(29, 155, 240);
-    fontSize:17px
+    font-size:20px;
+    font-weight: 400;
 }
 
 .SideBar-showmore:hover{
     background-color: lightgrey;
     cursor: pointer;
 }
-@media screen and (max-width: 1200px) {
-    .Sidebar-container {
-        display:none;
-    }
-}
+/*@media screen and (max-width: 1200px) {*/
+/*    .Sidebar-container {*/
+/*        display:none;*/
+/*    }*/
+/*}*/
 

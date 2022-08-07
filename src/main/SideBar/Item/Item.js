@@ -25,14 +25,10 @@ export default class Item extends React.Component {
 
     render() {
         const {header, content, footer, meta} = this.props;
-        console.log("Items")
-        console.log(header)
-        console.log(meta)
         let realFooter;
         let realMeta;
         if (footer) {
             realFooter = (footer) => {
-                console.log(footer);
                 return (<Footer {...footer}></Footer>);
             }
         }else{
@@ -43,7 +39,7 @@ export default class Item extends React.Component {
         if (meta) {
             realMeta = (meta) => {
                 return (<div className={"Item-meta"}>
-                    <img src={`meta`}/>
+                    <img src={meta}/>
                 </div>)
             }
         } else {

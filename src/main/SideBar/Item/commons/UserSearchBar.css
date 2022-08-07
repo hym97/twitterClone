@@ -1,0 +1,50 @@
+.UserSearchBar-container{
+    width: 365px;
+    height: 92px;
+    padding: 13px 18px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.UserSearchBar-avatar-container{
+    width: 66px;
+    height: 66px;
+}
+
+.UserSearchBar-avatar{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-color: transparent;
+}
+
+.UserSearchBar-userInfo-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.UserSearchBar-userInfo-desc{
+    height: 22px;
+    font-size: 17px;
+    width: 245px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: anywhere;
+    word-break: break-all;
+    color:  #536471;
+}
+
+.UserSearchBar-userInfo-desc > span{
+    white-space: nowrap;
+}
+
+.UserSearchBar-name-container-first-line-text{
+    color:black;
+    cursor: pointer;
+
+}

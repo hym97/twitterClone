@@ -1,0 +1,14 @@
+.SideBarFooter-link-container{
+    display: flex;
+    width: 314px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.SideBarFooter-container{
+    display: flex;
+    width: 350px;
+    padding: 0 18px 0 18px;
+    flex-direction: column;
+}

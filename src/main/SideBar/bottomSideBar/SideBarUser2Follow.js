@@ -24,8 +24,8 @@ export default class SideBarUser2Follow extends React.Component{
                     )
         })
         return (
-            <div className={"SideBarUser2Follow-container"}>
-                <div className={"Siderbar-Header"}>
+            <div className={"SideBarUser2Follow-container"} >
+                <div className={"SideBarUser2Follow-header"}>
                     <span>
                         {user2FollowHeader}
                     </span>

@@ -1,7 +1,7 @@
 //create users to test
-const psyduck = {avatar:`https://archives.bulbagarden.net/media/upload/5/53/054Psyduck.png`,
+const psyduck = {avatar:`https://www.pngitem.com/pimgs/m/177-1772639_psyduck-pokemon-character-vector-art-pokemon-png-psyduck.png`,
     userName:{userId:"Psyduck#0054", userDisplayedName:"Psyduck"}, certified:true, time:"4 hours ago",promoted:true,
-    link:"#"};
+    link:"#", desc:"this is a psyduck"};
 
 const persian = {avatar: `https://archives.bulbagarden.net/media/upload/1/13/053Persian.png`,
     userName:{userId:"Persian#0053", userDisplayedName: "Persian"}, certified: false, time: "Yesterday", promoted: false,
@@ -52,5 +52,6 @@ const firstPart = [{header:{user:psyduck}, content:content54, footer:null, meta:
     {header: {trendings:trendings2}, content: "Raining", footer: footer2, meta:null}]
 
 const secondPart = [{user:psyduck},{user:meltan},{user:rowlet}]
-
-export {firstPart,secondPart}
+const footerInfo = [{name:"Terms of Service", link:"#"}, {name:"Privacy Policy", link:"#"},
+    {name:"Cookie Policy", link:"#"},{name:"Accessibility", link:"#"}, {name:"Ads info", link:"#"},{name:"More", link:"#"}]
+export {firstPart,secondPart, footerInfo}

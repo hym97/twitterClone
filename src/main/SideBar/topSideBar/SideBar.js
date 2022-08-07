@@ -1,12 +1,11 @@
 import React from "react";
-import Item from "./Item/Item";
+import Item from "../Item/Item";
 import "./SideBar.css"
 
 export default class SideBar extends React.Component{
 
     render(){
         const {sideBarHeader, items} = this.props
-        console.log(sideBarHeader)
         const itemsComps = items.map((obj, key) =>{
 
             const {header,content,footer,meta} = obj

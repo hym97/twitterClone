@@ -1,0 +1,32 @@
+.SearchBarPanel-container{
+    width: 378px;
+    min-height: 100px;
+    max-height: calc(80vh - 58px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-color: transparent;
+    background-color: white;
+    border-width: 1px;
+    border-radius: 8px;
+    position: absolute;
+    top:50px;
+    z-index: 5;
+    box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+}
+
+.SearchBarPanel-no-result-text-container{
+    width: 378px;
+    height: 57px;
+    padding: 22px 13px 13px 13px;
+    font-size: 17px;
+    color: #536471;
+}
+
+.SearchBarPanel-go-to{
+    font-size: 17px;
+    color: #536471;
+    height: 58px;
+    width: 365px;
+    padding: 18px;
+}
+

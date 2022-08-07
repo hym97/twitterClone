@@ -1,7 +1,7 @@
 .UserLarge-container{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .UserLarge-avatar{
@@ -63,6 +63,8 @@
 .UserLarge-name-container-first-line-text:hover{
     text-decoration: underline black;
 }
+
+
 
 
 .UserLarge-name-id{
