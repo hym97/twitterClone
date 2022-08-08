@@ -1,0 +1,98 @@
+$blackColor: rgb(15,20,25)
+$greyColor:  #536471
+%place-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+%Signin-container-row-base
+  @extend %place-center
+  width: 100%
+
+.Signin-container-base
+  @extend %Signin-container-row-base
+
+.Signin-greyBoard
+  background-color: rgba(0,0,0,0.4)
+  z-index: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+.Signin-container
+  background-color: white
+  height: 650px
+  width: 600px
+  z-index: 2
+  border-radius: 16px
+  display: flex
+  flex-direction: column
+
+
+.Signin-container-first-row
+  @extend %Signin-container-row-base
+  height: 58px
+  width: 600px
+  padding: 0 18px 0 18px
+  position: relative
+
+  .icon-delete-container
+    position: absolute
+    color: $blackColor
+    top: 0
+    left: 18px
+    width: 38px
+    height: 58px
+    display: flex
+    align-items: center
+
+  .icon-logo-container
+    color: rgb(29, 155, 240)
+    height: 58px
+    width: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.Signin-container-second-row
+  @extend %Signin-container-row-base
+  font-size: 34px
+  color: $blackColor
+  margin: 22px 0 22px 0
+  font-weight: 700
+  width: 294px
+  height: 40px
+
+.Signin-container-third-part
+  @extend %Signin-container-row-base
+  height: 44px
+  width: 300px
+  margin: 13px 0 13px 0
+
+.Signin-container-with-or
+  @extend %Signin-container-row-base
+  height: 22px
+  width: 294px
+  margin: 0 4px 0 4px
+
+  .line-container-left
+    @extend %place-center
+    margin-right: 4px
+
+  .line-container-right
+    @extend %place-center
+    margin-left: 4px
+
+
+
+  .word-container
+    @extend %place-center
+    margin: 0 4px 0 4px
+
+  .dotted-line
+    height: 1px
+    margin: 9px 0 9px 0
+    width: 126px
+    background-color: rgb(207,217,222)
+    font-size: 19px
+

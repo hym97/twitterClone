@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {firstPart,secondPart,footerInfo} from "./testData";
 import RightSideBar from "./main/SideBar/RightSideBar";
+import Signin from "./AuthModule/Signin/Signin";
 // import SearchBar from "./main/SideBar/SearchBar/SearchBar";
 // import UserSearchBar from "./main/SideBar/Item/commons/UserSearchBar";
 // import SearchBarItem from "./main/SideBar/SearchBar/SearchBarItemPanel/SearchBarItem/SearchBarItem";
@@ -23,7 +30,16 @@ import RightSideBar from "./main/SideBar/RightSideBar";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <RightSideBar firstPart={firstPart} secondPart={secondPart} footerInfo = {footerInfo}/>
+<Router>
+    <Routes>
+        <Route path="/about"
+               element={<Signin/>}/>
+        <Route path="/"
+               element ={<RightSideBar firstPart={firstPart} secondPart={secondPart} footerInfo = {footerInfo}/>}/>
+
+    </Routes>
+</Router>
+
   </React.StrictMode>
 );
 
