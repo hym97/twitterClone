@@ -51,7 +51,7 @@ export default class AuthButton extends React.Component{
             }
         }
         return (
-            <Link to={"../"}>
+            <Link to={link}>
                 <div>
                     <div className={"AuthButton-text"}>
                         {IconComp()}

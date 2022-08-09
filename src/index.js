@@ -11,6 +11,7 @@ import reportWebVitals from './reportWebVitals';
 import {firstPart,secondPart,footerInfo} from "./testData";
 import RightSideBar from "./main/SideBar/RightSideBar";
 import Signin from "./AuthModule/Signin/Signin";
+import SignInPwd from "./AuthModule/Signin/SignInPwd";
 // import SearchBar from "./main/SideBar/SearchBar/SearchBar";
 // import UserSearchBar from "./main/SideBar/Item/commons/UserSearchBar";
 // import SearchBarItem from "./main/SideBar/SearchBar/SearchBarItemPanel/SearchBarItem/SearchBarItem";
@@ -32,8 +33,10 @@ root.render(
   <React.StrictMode>
 <Router>
     <Routes>
-        <Route path="/about"
+        <Route path="/flow"
                element={<Signin/>}/>
+        <Route path= "/flow/pwd"
+              element ={<SignInPwd/>}/>
         <Route path="/"
                element ={<RightSideBar firstPart={firstPart} secondPart={secondPart} footerInfo = {footerInfo}/>}/>
 
