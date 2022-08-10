@@ -1,0 +1,13 @@
+.blackHoverStyle:hover {
+  background-color: rgb(39, 44, 48);
+}
+
+.darkGreyHoverStyle:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.lightBlueHoverStyle:hover {
+  background-color: aliceblue;
+}
+
+/*# sourceMappingURL=commons.css.map */
