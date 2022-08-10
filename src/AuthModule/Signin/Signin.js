@@ -10,10 +10,13 @@ export default class Signin extends React.Component{
     defaultData = [{link:"#",text:"Continue with Google", icon:"Google"},
         {link:"#",text:"Continue with Apple", icon:"Apple"},{link:"pwd",text:"Next", icon:null},
         {link:"#",text:"Forgot password?", icon:null}]
+    state ={userName:null}
     getChildVal = (val, name) => {
         console.log(val)
         this.setState({[name]:val})
-
+    }
+    passCurrentUserName = () =>{
+        return {userName:this.state.userName}
     }
     // state={activeOutline:false};
     // focusInput = React.createRef();
@@ -52,21 +55,24 @@ export default class Signin extends React.Component{
                         </div>
                     </div>
 
-                    <SignInInputDiv name={"userName"} prtHandler={this.getChildVal}/>
+                    <SignInInputDiv name={"userName"} prtHandler={this.getChildVal} HandlerVersion={"old"}/>
+
                     <div className={"Signin-container-base"}>
                         <div className={"Signin-container-next"}>
                             <div className={"AuthButton-next blackHoverStyle"}><AuthButton {...this.defaultData[2]}/></div>
                         </div>
                     </div>
-                    <div className={"Signin-container-base"}>
-                        <div className={"Signin-container-next"}>
-                            <div className={"AuthButton-base darkGreyHoverStyle"}> <AuthButton {...this.defaultData[3]}/></div>
+                    <Link to={"pwd"} state={{userName:this.state.userName}}>
+                        <div className={"Signin-container-base"}>
+                            <div className={"Signin-container-next"}>
+                                <div className={"AuthButton-base darkGreyHoverStyle"}> <AuthButton {...this.defaultData[3]}/></div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     <div className={"Signin-container-base"}>
                         <div className={"Signin-container-final"}>
                             <span>Don't have an account?   </span>
-                            <Link to={"/pwd"} style={{color:"rgb(29,155,240)", marginLeft:"3px" ,fontWeight:"700"}}>Sign up</Link>
+                            {/*<Link to={"/pwd"} style={{color:"rgb(29,155,240)", marginLeft:"3px" ,fontWeight:"700"}}>Sign up</Link>*/}
                         </div>
                     </div>
                 </div>

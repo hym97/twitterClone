@@ -8,10 +8,16 @@ export default class SignInInputDiv extends React.Component {
     focusInput = React.createRef();
 
     returnPrtVal = () => {
+        const Version = this.props.HandlerVersion
         const currVal = this.focusInput.current.value;
 
         // this.props.prtHanlder.bind(this)
-        this.props.prtHandler(currVal, this.props.name);
+        if(Version === "old"){
+            this.props.prtHandler(currVal, this.props.name);
+        }else{
+            this.props.prtHandler(currVal)
+        }
+
     }
 
     parseOptions = () => {

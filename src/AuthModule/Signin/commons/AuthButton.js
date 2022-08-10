@@ -50,17 +50,25 @@ export default class AuthButton extends React.Component{
                 }
             }
         }
-        return (
-            <Link to={link}>
+        // if(link){
+        //     return (
+        //         <Link to={link}>
+        //             <div>
+        //                 <div className={"AuthButton-text"}>
+        //                     {IconComp()}
+        //                     {text}
+        //                 </div>
+        //             </div>
+        //         </Link>
+        //     )
+        // }else{
+            return (
                 <div>
                     <div className={"AuthButton-text"}>
                         {IconComp()}
                         {text}
                     </div>
                 </div>
-            </Link>
-
-
-        )
-    }
+            )
+        }
 }

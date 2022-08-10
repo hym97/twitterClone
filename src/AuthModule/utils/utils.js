@@ -1,6 +1,6 @@
-function getChildVal(val, name) {
+function getChildVal(val, name, hook) {
     console.log(val)
-    this.setState({[name]: val})
+    hook( val)
 }
 
 export {getChildVal}

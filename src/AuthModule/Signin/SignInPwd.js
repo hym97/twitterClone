@@ -1,27 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import SignInPanel from "./commons/SignInPanel";
 import SignInInputDiv from "./commons/SignInInputDiv";
 import AuthButton from "./commons/AuthButton";
 import {Link} from "react-router-dom";
 import "./SigninPwd.css"
-import {getChildVal} from "../utils/utils";
+import { useLocation } from 'react-router-dom'
 
-export default class SignInPwd extends React.Component{
-    constructor(props) {
-        super(props);
-        this.getChildVal = getChildVal.bind(this)
-    }
 
-    defaultData = [{link:"#",text:"Continue with Google", icon:"Google"},
+export default function SignInPwd(){
+    debugger
+    const location = useLocation()
+    const {userName} = location.state
+    const [password,setPwd] = useState(0)
+
+    const defaultData = [{link:"#",text:"Continue with Google", icon:"Google"},
         {link:"#",text:"Continue with Apple", icon:"Apple"},{link:"#",text:"Next", icon:null},
         {link:"#",text:"Forgot password?", icon:null}]
-
-    // getChildVal = (val, name) => {
-    //     console.log(val)
-    //     this.setState({[name]:val})
-    //
-    // }
-    render() {
+    const fetchData = () =>{
+        console.log("helloworld")
+    }
     const mainContent = () => {
         return (
             <div>
@@ -33,17 +30,17 @@ export default class SignInPwd extends React.Component{
                     </span>
                         </div>
 
-                        <SignInInputDiv value={"1234"} options={{variant:"disabled", size:"lg"}}/>
-                        <SignInInputDiv name={"password"} prtHandler={this.getChildVal}
+                        <SignInInputDiv value={userName} options={{variant:"disabled", size:"lg"}}/>
+                        <SignInInputDiv name={"password"} prtHandler={setPwd}
                                         type={"password"} options={{size:"lg"}}/>
                     </div>
                 </div>
                 <div className={"SignInPwd-container-bottom"}>
                     <div className={"Signin-container-base"} >
-                        <div style={{width:"424px", height:"109px"}}>
+                        <div style={{width:"424px", height:"109px"}} onClick={fetchData}>
                             <div className={"SignInPwd-container-login"}>
                                 <div className={"AuthButton-pwd-login blackHoverStyle"}>
-                                    <AuthButton {...{link:"#", text:"Log in", icon:"null"}}/></div>
+                                    <AuthButton {...{link:null, text:"Log in", icon:"null"}}/></div>
                             </div>
                         </div>
 
@@ -56,12 +53,10 @@ export default class SignInPwd extends React.Component{
                     </div>
                 </div>
             </div>
-        );
+        )
     }
-
     return (
         <SignInPanel mainContent={mainContent}/>
-        );
-    }
 
+    )
 }
