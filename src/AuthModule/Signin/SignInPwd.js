@@ -2,23 +2,30 @@ import React, {useState} from "react";
 import SignInPanel from "./commons/SignInPanel";
 import SignInInputDiv from "./commons/SignInInputDiv";
 import AuthButton from "./commons/AuthButton";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./SigninPwd.css"
 import { useLocation } from 'react-router-dom'
+import { Auth } from 'aws-amplify';
 
 
 export default function SignInPwd(){
-    debugger
     const location = useLocation()
+    let navigate = useNavigate()
     const {userName} = location.state
     const [password,setPwd] = useState(0)
 
-    const defaultData = [{link:"#",text:"Continue with Google", icon:"Google"},
-        {link:"#",text:"Continue with Apple", icon:"Apple"},{link:"#",text:"Next", icon:null},
-        {link:"#",text:"Forgot password?", icon:null}]
-    const fetchData = () =>{
-        console.log("helloworld")
+
+    async function signIn() {
+        try {
+            const user = await Auth.signIn(userName, password);
+            console.log("success")
+            console.log(user)
+            navigate("/");
+        } catch (error) {
+            console.log('error signing in', error);
+        }
     }
+
     const mainContent = () => {
         return (
             <div>
@@ -31,13 +38,19 @@ export default function SignInPwd(){
                         </div>
 
                         <SignInInputDiv value={userName} options={{variant:"disabled", size:"lg"}}/>
-                        <SignInInputDiv name={"password"} prtHandler={setPwd}
+                        <SignInInputDiv labelText={"Password"} prtHandler={setPwd}
                                         type={"password"} options={{size:"lg"}}/>
+                        <Link to={"/flow/forgot"}>
+                            <div style={{fontSize:"14px", color:"rgb(29, 155, 240)"}}>
+                                <span>Forgot password?</span>
+                            </div>
+                        </Link>
+
                     </div>
                 </div>
                 <div className={"SignInPwd-container-bottom"}>
                     <div className={"Signin-container-base"} >
-                        <div style={{width:"424px", height:"109px"}} onClick={fetchData}>
+                        <div style={{width:"424px", height:"109px"}} onClick={signIn}>
                             <div className={"SignInPwd-container-login"}>
                                 <div className={"AuthButton-pwd-login blackHoverStyle"}>
                                     <AuthButton {...{link:null, text:"Log in", icon:"null"}}/></div>

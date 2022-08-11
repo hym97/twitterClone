@@ -45,6 +45,7 @@
   width: 600px;
   padding: 0 18px 0 18px;
   position: relative;
+  cursor: default;
 }
 .Signin-container-first-row .icon-delete-container {
   position: absolute;
@@ -79,6 +80,7 @@
   font-weight: 700;
   width: 294px;
   height: 40px;
+  cursor: default;
 }
 
 .Signin-container-third-part {
@@ -86,6 +88,7 @@
   height: 44px;
   width: 300px;
   margin: 13px 0 13px 0;
+  cursor: pointer;
 }
 
 .Signin-container-with-or {
@@ -181,6 +184,7 @@
   height: 40px;
   width: 294px;
   margin: 13px 0 13px 0;
+  cursor: pointer;
 }
 
 .Signin-container-final {

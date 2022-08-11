@@ -1,5 +1,6 @@
 import React from "react";
 import "../Signin.css"
+import {Link} from "react-router-dom";
 
 
 export default class SignInPanel extends React.Component {
@@ -28,21 +29,23 @@ export default class SignInPanel extends React.Component {
                  >
                 <div className={"Signin-container"}>
                     <div className={"Signin-container-first-row"}>
-                        <div className={"icon-delete-container"}
-                             onMouseEnter={this.displayText} onMouseLeave={this.hideText}>
-                            <svg viewBox="0 0 24 24" aria-hidden="true"
-                                 style={{width: "22px", height: "22px", fill: "currentcolor"}}>
-                                <g>
-                                    <path
-                                        d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path>
-                                </g>
-                            </svg>
-                            <div style={{display: this.state.textState ? "flex" : "none"}} className={"Signin-delete-icon-item-close"}>
+                        <Link to={"/main"}>
+                            <div className={"icon-delete-container"}
+                                 onMouseEnter={this.displayText} onMouseLeave={this.hideText}>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"
+                                     style={{width: "22px", height: "22px", fill: "currentcolor"}}>
+                                    <g>
+                                        <path
+                                            d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path>
+                                    </g>
+                                </svg>
+                                <div style={{display: this.state.textState ? "flex" : "none"}} className={"Signin-delete-icon-item-close"}>
                         <span>
                             Close
                         </span>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
 
                         <div className={"icon-logo-container"}>
                             <svg viewBox="0 0 24 24" aria-label="Twitter" role="img"

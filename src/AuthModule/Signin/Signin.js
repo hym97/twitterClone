@@ -56,13 +56,15 @@ export default class Signin extends React.Component{
                     </div>
 
                     <SignInInputDiv name={"userName"} prtHandler={this.getChildVal} HandlerVersion={"old"}/>
-
-                    <div className={"Signin-container-base"}>
-                        <div className={"Signin-container-next"}>
-                            <div className={"AuthButton-next blackHoverStyle"}><AuthButton {...this.defaultData[2]}/></div>
-                        </div>
-                    </div>
                     <Link to={"pwd"} state={{userName:this.state.userName}}>
+                        <div className={"Signin-container-base"}>
+                            <div className={"Signin-container-next"}>
+                                <div className={"AuthButton-next blackHoverStyle"}><AuthButton {...this.defaultData[2]}/></div>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <Link to={"forgot"} >
                         <div className={"Signin-container-base"}>
                             <div className={"Signin-container-next"}>
                                 <div className={"AuthButton-base darkGreyHoverStyle"}> <AuthButton {...this.defaultData[3]}/></div>
@@ -72,7 +74,7 @@ export default class Signin extends React.Component{
                     <div className={"Signin-container-base"}>
                         <div className={"Signin-container-final"}>
                             <span>Don't have an account?   </span>
-                            {/*<Link to={"/pwd"} style={{color:"rgb(29,155,240)", marginLeft:"3px" ,fontWeight:"700"}}>Sign up</Link>*/}
+                            <Link to={"/main"} style={{color:"rgb(29,155,240)", marginLeft:"3px" ,fontWeight:"700"}}>Sign up</Link>
                         </div>
                     </div>
                 </div>

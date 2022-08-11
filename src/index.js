@@ -5,13 +5,17 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {firstPart,secondPart,footerInfo} from "./testData";
 import RightSideBar from "./main/SideBar/RightSideBar";
 import Signin from "./AuthModule/Signin/Signin";
 import SignInPwd from "./AuthModule/Signin/SignInPwd";
+import {ForgotPassword} from "./AuthModule/ForgotPassword/ForgotPassword";
+import {Main} from "./main/Main"
+import { Amplify, Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -23,7 +27,9 @@ root.render(
               element ={<SignInPwd/>}/>
         <Route path="/"
                element ={<RightSideBar firstPart={firstPart} secondPart={secondPart} footerInfo = {footerInfo}/>}/>
-
+        <Route path='/flow/forgot'
+               element={<ForgotPassword/>}/>
+        <Route path = "/main" element={<Main/>}/>
     </Routes>
 </Router>
 
