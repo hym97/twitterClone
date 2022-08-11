@@ -13,8 +13,8 @@ import Signin from "./AuthModule/Signin/Signin";
 import SignInPwd from "./AuthModule/Signin/SignInPwd";
 import {ForgotPassword} from "./AuthModule/ForgotPassword/ForgotPassword";
 import {Main} from "./main/Main"
-import { Amplify, Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
+import { Amplify} from 'aws-amplify';
+import awsconfig from './src/aws-exports';
 Amplify.configure(awsconfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
