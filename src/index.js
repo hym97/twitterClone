@@ -14,7 +14,7 @@ import SignInPwd from "./AuthModule/Signin/SignInPwd";
 import {ForgotPassword} from "./AuthModule/ForgotPassword/ForgotPassword";
 import {Main} from "./main/Main"
 import { Amplify} from 'aws-amplify';
-import awsconfig from './src/aws-exports';
+import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
